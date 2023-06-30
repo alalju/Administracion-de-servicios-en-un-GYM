@@ -23,7 +23,8 @@
                 android:id="@+id/cliente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="none"
+                android:focusable="false"
                 android:textColorHint="#757575" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,7 +41,8 @@
                 android:id="@+id/servicio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="none"
+                android:focusable="false"
                 android:textColorHint="#757575" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -57,7 +59,8 @@
                 android:id="@+id/fecha_ini"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="none"
+                android:focusable="false"
                 android:textColorHint="#757575" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,27 +77,34 @@
                 android:id="@+id/fecha_fin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="none"
+                android:focusable="false"
                 android:textColorHint="#757575" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/capocantidad"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="16dp"
-            android:hint="Estado de pago">
+            android:hint="Cantidad">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/estado"
+                android:id="@+id/cantidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="number"
                 android:textColorHint="#757575" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <Spinner
+            android:id="@+id/estado"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"

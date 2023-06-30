@@ -26,11 +26,11 @@ class Repository private constructor(context: Context){
 
 
     //Operaciones cliente
-    suspend fun insertarCliente(cliente: Cliente):Long = clienteDao.insert(cliente)
-    suspend fun actualizarCliente(cliente: Cliente) = clienteDao.update(cliente)
-    suspend fun eliminarCliente(cliente: Cliente) = clienteDao.delete(cliente)
-    suspend fun consultarClientePorId(id: Int): Cliente = clienteDao.getClienteById(id=id)
-    suspend fun consultarTodosLosClientes(): List<Cliente> = clienteDao.getAllClientes()
+     fun insertarCliente(cliente: Cliente):Long = clienteDao.insert(cliente)
+     fun actualizarCliente(cliente: Cliente) = clienteDao.update(cliente)
+     fun eliminarCliente(cliente: Cliente) = clienteDao.delete(cliente)
+     fun consultarClientePorId(id: Int): Cliente = clienteDao.getClienteById(id=id)
+     fun consultarTodosLosClientes(): List<Cliente> = clienteDao.getAllClientes()
 
     //Operaciones Contacto
     suspend fun insertContacto(contacto: Contacto) = contactoDao.insert(contacto)
@@ -86,6 +86,7 @@ class Repository private constructor(context: Context){
     suspend fun eliminarSubscripcion(subscripcion: Subscripcion) = subscripcionDao.delete(subscripcion)
     suspend fun obtenerSubscripcionPorId(id: Int): Subscripcion = subscripcionDao.getSubscripcionById(id= id)
     suspend fun obtenerTodasLasSubscripciones(): List<Subscripcion> = subscripcionDao.getAllSubscripciones()
+    fun obtenerTodasLasSubscripcionesByIdEstado(id: Int):List<Subscripcion> = subscripcionDao.getSubscripcionByIdEstdao(id= id)
 
     //Ubicacion
     suspend fun insertarUbicacion(ubicacion: Ubicacion) = ubicacionDao.insert(ubicacion)

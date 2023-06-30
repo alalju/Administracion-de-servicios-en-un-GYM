@@ -17,10 +17,12 @@ interface SubscripcionDao {
     @Query("SELECT * FROM subscripcion WHERE id_suscripcion = :id")
     fun getSubscripcionById(id: Int): Subscripcion
 
+    @Query("SELECT * FROM subscripcion WHERE id_estado_pago = :id")
+    fun getSubscripcionByIdEstdao(id: Int):List< Subscripcion>
+
     @Query("SELECT * FROM subscripcion")
     fun getAllSubscripciones(): List<Subscripcion>
 
-    @Query("SELECT subscripcion.*, servicio.nombre FROM subscripcion INNER JOIN servicio ON subscripcion.id_servicio = servicio.id_servicio WHERE subscripcion.id_suscripcion = :idSuscripcion")
-    fun getSubscriptionWithServiceName(idSuscripcion: Int): SubscripcionServicio
+
 
 }

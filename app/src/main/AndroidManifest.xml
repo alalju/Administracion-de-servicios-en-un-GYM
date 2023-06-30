@@ -12,6 +12,9 @@
         android:theme="@style/Theme.GestionDeServicosDeEntrenamiento"
         tools:targetApi="31">
         <activity
+            android:name=".views.PagosActivity"
+            android:exported="false" />
+        <activity
             android:name=".views.subscripciones.VerSubscripcionActivity"
             android:exported="false" />
         <activity
