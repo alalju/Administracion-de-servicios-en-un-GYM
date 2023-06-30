@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:elevation="7dp"
+    android:background="@drawable/esquinas_redondeadas_blanco">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ejercicio"
+            android:background="@drawable/circulo_verde2"
+            android:layout_margin="10dp"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Subscripción"
+            android:textSize="20dp"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:src="@drawable/eliminar"
+            android:layout_margin="10dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/lapiz"
+            android:layout_margin="10dp"
+            tools:ignore="MissingConstraints" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Monto"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fin"
+                android:textSize="16dp"
+                tools:ignore="MissingConstraints" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/monto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/inicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/fin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                tools:ignore="MissingConstraints" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelar"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Cancelar"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/verde"
+                android:layout_margin="5dp"
+                app:layout_constraintVertical_bias="0.89" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/guardar"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Pagar"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/verde"
+                android:layout_margin="5dp"
+                app:layout_constraintVertical_bias="0.883" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
