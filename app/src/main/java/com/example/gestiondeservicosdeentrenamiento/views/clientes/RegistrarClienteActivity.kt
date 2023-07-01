@@ -9,16 +9,18 @@ import com.example.gestiondeservicosdeentrenamiento.db.entidades.*
 import com.example.gestiondeservicosdeentrenamiento.interfaces.presenters.IRegistrarClientePresenter
 import com.example.gestiondeservicosdeentrenamiento.interfaces.views.RegistrarClienteView
 import com.example.gestiondeservicosdeentrenamiento.interfaces.views.RegistrarServicioView
+import com.example.gestiondeservicosdeentrenamiento.views.UnicacionFragment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class RegistrarClienteActivity : AppCompatActivity(), RegistrarClienteView {
+class RegistrarClienteActivity : AppCompatActivity(), RegistrarClienteView, UnicacionFragment.DataSet {
     private lateinit var presenter: IRegistrarClientePresenter
     private lateinit var binding: ActivityRegistrarClienteBinding
     private var id_cliente:Long =0
     private lateinit var clienteCreate: Cliente
+    private lateinit var codigo: Codigo
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,21 +51,33 @@ class RegistrarClienteActivity : AppCompatActivity(), RegistrarClienteView {
             }
             finish()
         }
-
+        clickEstado()
+        clickColonia()
+        clickCp()
         binding.rsBtnCancelar.setOnClickListener {
             finish()
         }
     }
 
-    /*
-    override fun onBackPressed() {
-        lifecycleScope.launch(Dispatchers.IO){
-            presenter.eliminar(clienteCreate)
+
+    private fun clickEstado(){
+        binding.estado.setOnClickListener{
+            val dialogFragment = UnicacionFragment()
+            dialogFragment.show(supportFragmentManager, "tag")
         }
     }
-
-     */
-
+    private fun clickColonia(){
+        binding.colonia.setOnClickListener{
+            val dialogFragment = UnicacionFragment()
+            dialogFragment.show(supportFragmentManager, "tag")
+        }
+    }
+    private fun clickCp(){
+        binding.cp.setOnClickListener{
+            val dialogFragment = UnicacionFragment()
+            dialogFragment.show(supportFragmentManager, "tag")
+        }
+    }
 
     private fun obtenerContacto():Contacto{
         return Contacto(binding.telefono.text.toString(), binding.correo.text.toString(),id_cliente.toInt())
@@ -102,6 +116,10 @@ class RegistrarClienteActivity : AppCompatActivity(), RegistrarClienteView {
         id_cliente=id
         clienteCreate= Cliente(id.toInt())
         System.out.println("El id del cliente registrado es: "+ id)
+    }
+
+    override fun dataSet(codigo: Codigo) {
+        this.codigo= codigo
     }
 
 }

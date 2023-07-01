@@ -196,7 +196,8 @@
                 android:id="@+id/estado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="none"
+                android:focusable="false"
                 android:textColorHint="#757575" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -212,7 +213,8 @@
                 android:id="@+id/colonia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="none"
+                android:focusable="false"
                 android:textColorHint="#757575" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -228,7 +230,8 @@
                 android:id="@+id/cp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="none"
+                android:focusable="false"
                 android:textColorHint="#757575" />
         </com.google.android.material.textfield.TextInputLayout>
 
